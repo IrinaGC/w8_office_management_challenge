@@ -13,4 +13,8 @@ class Office {
     this.listRooms().push(room);
     console.log(this.listRooms());
   }
+
+  availableRooms() {
+    return this._meetingRooms.filter(room => room.status() === true);
+  }
 };
